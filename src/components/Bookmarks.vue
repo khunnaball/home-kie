@@ -53,11 +53,6 @@ button {
     height: 10px;
 }
 
-/* .buttontext {
-    color: #757575;
-    font-family: 'SpaceMono-regular';
-} */
-
 .button {
 	border: none;
     background: none;
