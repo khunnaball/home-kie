@@ -16,13 +16,9 @@ export default {
         clearInterval(this.interval);
     },
     created() {
-        this.interval = setInterval(() => {
-            this.time = Intl.DateTimeFormat(navigator.language, {
-                hour: 'numeric',
-                minute: 'numeric',
-                second: 'numeric'
-            }).format()
-        }, 1000);
+        this.interval = setInterval( () => {
+            this.time = new Date().toLocaleTimeString()
+        });
     }
 }
 </script>

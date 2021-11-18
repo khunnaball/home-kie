@@ -1,7 +1,7 @@
 <template>
     <div>
         <form id="form" role="search" @submit.prevent="googleSearch()">
-            <input type="search" id="query" v-model="query" placeholder="search..">
+            <input type="search" id="query" v-model="query" placeholder="search.." autocomplete="off">
         </form>
     </div>
 </template>
