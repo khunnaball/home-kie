@@ -1,24 +1,24 @@
 <template>
     <div class="button-container">
         <div class="button-row">
-            <button class="button" id="youtube"><a target="_self" style="text-decoration: none" href="https://youtube.com">youtube</a></button>
+            <button class="button" id="youtube"><a target="_self" href="https://youtube.com">youtube</a></button>
             <p> | </p>
-            <button class="button" id="twitter"><a target="_self" style="text-decoration: none" href="https://twitter.com">twitter</a></button>
+            <button class="button" id="twitter"><a target="_self" href="https://twitter.com">twitter</a></button>
             <p> | </p>
-            <button class="button" id="twitch"><a target="_self" style="text-decoration: none" href="https://www.twitch.tv/">twitch</a></button>
+            <button class="button" id="twitch"><a target="_self" href="https://www.twitch.tv/">twitch</a></button>
             <p> | </p>
-            <button class="button" id="gmail"><a target="_self" style="text-decoration: none" href="https://mail.google.com/">gmail</a></button>
+            <button class="button" id="gmail"><a target="_self" href="https://mail.google.com/">gmail</a></button>
         </div>
         <div class="button-row">
-            <button class="button" id="github"><a target="_self" style="text-decoration: none" href="https://github.com">github</a></button>
+            <button class="button" id="github"><a target="_self" href="https://github.com">github</a></button>
             <p> | </p>
-            <button class="button" id="reddit"><a target="_self" style="text-decoration: none" href="https://www.reddit.com/">reddit</a></button>
+            <button class="button" id="reddit"><a target="_self" href="https://www.reddit.com/">reddit</a></button>
             <p> | </p>
-            <button class="button" id="twitter"><a target="_self" style="text-decoration: none" href="https://dev.to">dev.to</a></button>
+            <button class="button" id="twitter"><a target="_self" href="https://dev.to">dev.to</a></button>
             <p> | </p>
-            <button class="button" id="spotify"><a target="_self" style="text-decoration: none" href="https://spotify.com/">spotify</a></button>
+            <button class="button" id="spotify"><a target="_self" href="https://spotify.com/">spotify</a></button>
             <p> | </p>
-            <button class="button" id="discord"><a target="_self" style="text-decoration: none" href="https://discord.com/">discord</a></button>
+            <button class="button" id="discord"><a target="_self" href="https://discord.com/">discord</a></button>
         </div>
     </div>
 </template>
@@ -77,5 +77,6 @@ button {
 
 a {
     color: inherit; 
+    text-decoration: none;
 }
 </style>
