@@ -1,7 +1,7 @@
 <template>
     <div>
         <form id="form" role="search" @submit.prevent="googleSearch()">
-            <input type="search" id="query" v-model="query" placeholder="search.." autocomplete="off">
+            <input type="search" id="query" v-model="query" placeholder="search.." autocomplete="off" autofocus>
         </form>
     </div>
 </template>
@@ -67,5 +67,6 @@ input {
     border-bottom-style: hidden;
     color: rgba(255, 255, 255, 0.5);
     text-align: center;
+    caret-color: transparent;
 }
 </style>
