@@ -1,23 +1,47 @@
 <template>
     <div>
-        <form id="form" role="search" @submit.prevent="googleSearch()">
-            <input type="search" id="query" v-model="query" placeholder="search.." autocomplete="off" autofocus>
+        <form id="form" role="search" @submit.prevent="search()">
+            <input type="search" id="query" v-model="query" :placeholder="placeholder()" autocomplete="off" ref="searchBox">
         </form>
     </div>
 </template>
 
 <script>
+import { config } from "../../config.js";
+
 export default {
     data() {
         return {
-            query: ""
+            query: "",
+            engines: {
+                google: {
+                    url: "https://www.google.com/search?q=",
+                    display: "Google",
+                },
+                ddg: {
+                    url: "https://duckduckgo.com/?q=",
+                    display: "DuckDuckGo",
+                },
+            }
+        }
+    },
+    mounted() {
+        if (config.autoFocusBar) {
+            this.$refs.searchBox.focus();
         }
     },
     methods: {
-        googleSearch() {
-            const search = 'https://www.google.com/search?d&q=';
-            const url = search + this.query + '&ia=web';
+        search() {
+            const searchEngine = config.searchEngine;
+            const url = this.engines[searchEngine].url + this.query + '&ia=web';
             window.open(url, '_self');
+        },
+        placeholder() {
+            if (config.barPlaceholder === "") {
+                return this.engines[config.searchEngine].display;
+            } else {
+                return config.barPlaceholder;
+            }
         }
     }
 }
@@ -67,6 +91,10 @@ input {
     border-bottom-style: hidden;
     color: rgba(255, 255, 255, 0.5);
     text-align: center;
-    caret-color: transparent;
+    /* caret-color: transparent; */
+}
+
+input:focus::placeholder {
+    color: transparent;
 }
 </style>

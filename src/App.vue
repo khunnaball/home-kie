@@ -1,20 +1,20 @@
 <template>
   <div id="app">
-    <Time/>
+    <Clock/>
     <Search/>
     <Bookmarks/>
   </div>
 </template>
 
 <script>
-import Time from './components/Time.vue';
+import Clock from './components/Clock.vue';
 import Search from './components/Search.vue';
 import Bookmarks from './components/Bookmarks.vue';
 
 export default {
   name: 'App',
   components: {
-    Time,
+    Clock,
     Search,
     Bookmarks
   }

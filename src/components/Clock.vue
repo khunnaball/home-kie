@@ -1,10 +1,12 @@
 <template>
     <div>
-        <p id="clock">{{ time }}</p>
+        <p class="clock">{{ time }}</p>
     </div>
 </template>
 
 <script>
+import { config } from "../../config.js";
+
 export default {
     data() {
         return {
@@ -17,7 +19,7 @@ export default {
     },
     created() {
         this.interval = setInterval( () => {
-            this.time = new Date().toLocaleTimeString()
+            this.time = new Date().toLocaleTimeString([], { hour12: config.twelveHourFormat })
         });
     }
 }
@@ -32,7 +34,7 @@ export default {
         align-content: center;
     }
 
-    #clock {
+    .clock {
         width: 100%;
         font-size: 60px;
         text-align: center;
