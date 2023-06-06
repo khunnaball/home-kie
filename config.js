@@ -48,8 +48,8 @@ const CONFIG = {
         },
         {
             id: '3',
-            name: 'dev.to',
-            link: 'https://dev.to/',
+            name: 'hackernews',
+            link: 'https://hckrnews.com/',
         },
         {
             id: '4',
