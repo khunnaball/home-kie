@@ -62,3 +62,4 @@ Some of the features I intend to add are:
 * Themes
 * Greetings
 * Backgrounds (possibly animated backgrounds too)
+* Ability to change settings on the page instead of using the config file
